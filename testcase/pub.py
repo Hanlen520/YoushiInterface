@@ -43,6 +43,9 @@ class PubTest(unittest.TestCase):
     # 直播课取消预约
     PadLiveReserveCancel = "https://uathome.uuabc.com/PadLiveReserveCancel"
 
+    # 检测版本更新
+    lastVersion = "https://sit5home.uuabc.com/lastversion"
+
     headers = {
         'content-type': 'application/json; charset = utf-8',
         'Accept': 'application/json',

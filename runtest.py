@@ -44,7 +44,7 @@ if __name__ == '__main__':
     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     filename = '/Users/shuibu/PycharmProjects/YoushiInterface/test_result/' + now + 'test_result.html'
     fp = open(filename, 'wb+')
-    runner = HTMLTestRunner(fp, title=u'测试用例(uathome环境)', description=u'report test')
+    runner = HTMLTestRunner(fp, title=u'测试用例(sit5home环境)', description=u'report test')
     runner.run(suite)
     fp.close()
 

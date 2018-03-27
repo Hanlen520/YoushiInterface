@@ -6,11 +6,7 @@ import pymysql
 
 
 class PadLiveReserveCancel(PubTest):
-    play = {
-        'token': PubTest.ld['token'],
-        'liveId': 195,
-    }
 
     def test_Cancel_case(self):
-        code = requests.request("POST", url=PubTest.PadLiveReserveCancel, data=json.dumps(self.play))
+        code = requests.request("POST", url=PubTest.PadLiveReserveCancel, data=json.dumps(PubTest.data2))
         self.assertEquals(code.json(), {'status': 1, "msg": "取消预约成功"})

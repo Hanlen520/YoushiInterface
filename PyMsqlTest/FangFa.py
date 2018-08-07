@@ -3,13 +3,21 @@ from testcase.pub import PubTest
 
 
 class TestMysql(object):
-    conn = pymysql.connect(host="uathome.uuabc.com",
+
+    conn = pymysql.connect(host="sit5home.uuabc.com",
                            user="wufenfen",
                            password="wufenfen",
                            db="uuabc",
                            port=3306,
-                           charset='utf8'
+                           charset="utf8"
                            )
+    # conn = pymysql.connect(host="newhome.uuabc.com",
+    #                        user="wufenfen",
+    #                        password="wufenfen",
+    #                        db="uuabc",
+    #                        port=3306,
+    #                        charset='utf8'
+    #                        )
 
     """
     CourseRankList接口查询用户最近一节课，获得钻石不为0
@@ -47,4 +55,4 @@ class TestMysql(object):
         'liveId': raw[0],
         'token': PubTest.ld['token'],
     }
-
+    print(raw[0])

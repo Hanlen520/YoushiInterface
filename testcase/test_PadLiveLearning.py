@@ -33,7 +33,7 @@ class PadLiveLearningCase(PubTest):
             else:
                 print("数据异常")
 
-        except Exception:
+        except Exception as e:
             self.assertEquals(ss['msg'],"操作成功")
 
     # token丢失
@@ -50,7 +50,7 @@ class PadLiveLearningCase(PubTest):
             else:
                 print("数据异常")
 
-        except Exception:
+        except Exception as e:
             self.assertEquals(ss['msg'], "请先登录") # token失效后，提醒登录
 
     # 学习记录列表 type=2

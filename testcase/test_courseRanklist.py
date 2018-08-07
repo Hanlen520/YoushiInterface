@@ -19,16 +19,16 @@ class CourseRankList(PubTest):
         print(ss)
         self.assertEquals(ss['msg'], "Ok")
 
-    def test_list_courseIdNone_case(self):
-        re = deepcopy(self.play)
-        re['courseId'] = None
-        code = requests.request("POST", url=PubTest.CourseRankList, headers=PubTest.headers, data=json.dumps(re))
-        ss = json.loads(code.text)
-        self.assertEquals(ss['msg'], "课程ID不能为空")
+    # def test_list_courseIdNone_case(self):
+    #     re = deepcopy(self.play)
+    #     re['courseId'] = None
+    #     code = requests.request("POST", url=PubTest.CourseRankList, headers=PubTest.headers, data=json.dumps(re))
+    #     ss = json.loads(code.text)
+    #     self.assertEquals(ss['msg'], "课程ID不能为空")
 
-    def test_list_tokenNone_case(self):
-        re = deepcopy(self.play)
-        re['token'] = None
-        code = requests.request("POST", url=PubTest.CourseRankList, headers=PubTest.headers, data=json.dumps(re))
-        ss = json.loads(code.text)
-        self.assertEquals(ss['msg'],"请先登录")
+    # def test_list_tokenNone_case(self):
+    #     re = deepcopy(self.play)
+    #     re['token'] = None
+    #     code = requests.request("POST", url=PubTest.CourseRankList, headers=PubTest.headers, data=json.dumps(re))
+    #     ss = json.loads(code.text)
+    #     self.assertEquals(ss['msg'],"请先登录")

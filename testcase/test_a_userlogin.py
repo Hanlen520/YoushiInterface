@@ -8,6 +8,7 @@ class LoginCase(PubTest):
 
     def test_login_case(self):
         re = json.loads(PubTest.results.text)
+        print(re)
         self.assertEquals(PubTest.results.status_code, 200)
 
     def test_loginOk_case(self):
@@ -59,3 +60,4 @@ class LoginCase(PubTest):
         code = requests.request("POST", PubTest.base_url, headers=PubTest.headers, params=data)
         re = json.loads(code.text)
         self.assertNotEquals(re['status'], 1)
+

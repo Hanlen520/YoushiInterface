@@ -16,10 +16,11 @@ class PadLiveHistory(PubTest):
     def test_History_case(self):
         code = requests.request("POST", url=PubTest.PadLiveHistory, data=json.dumps(self.play))
         ss = json.loads(code.text)
-        self.assertEquals(ss['msg'], "操作成功")
+        self.assertEquals(code.status_code,200)
 
     def test_History_pageError_case(self):
         re = deepcopy(self.play)
         re['page'] = 'dd'
-        code = requests.request("POST", url=PubTest.PadLiveHistory, data=json.dumps(re))
-        self.assertEquals(code.json(), {'msg': "操作成功"})
+        code = requests.request("POST", url=PubTest.PadLiveHistory, data=re)
+        ss = json.loads(code.text)
+        self.assertEquals(ss["msg"],"操作成功")

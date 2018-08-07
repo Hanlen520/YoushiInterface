@@ -6,10 +6,13 @@ import smtplib
 import unittest
 import time
 
-test_dir = '/Users/shuibu/PycharmProjects/YoushiInterface/testcase/'
+# test_dir = '/Users/shuibu/PycharmProjects/YoushiInterface/testcase/'
+
+test_dir = '/Users/shuibu/PycharmProjects/YoushiInterface/NewPad/'
 
 
 # ==============定义发送邮件==========
+
 
 def send_mail(file_new):
     f = open(file_new, 'rb')
@@ -17,13 +20,13 @@ def send_mail(file_new):
     f.close()
 
     msg = MIMEText(mail_body, 'html', 'utf-8')
-    msg['Subject'] = Header("iPad接口测试报告(部分)", 'utf-8')
+    msg['Subject'] = Header("iPad接口测试报告(4.0)", 'utf-8')
 
     smtp = smtplib.SMTP()
     smtp.connect('smtp.exmail.qq.com')  # 邮箱服务器
     smtp.login("yao.li@uuabc.com", "Liyao121673")  # 登录邮箱
-    #  smtp.sendmail("yao.li@uuabc.com", "testgroup@uuabc.com", msg.as_string())  # 发送者和接收者
-    smtp.sendmail("yao.li@uuabc.com", "yao.li@uuabc.com", msg.as_string())  # 发送者和接收者
+    smtp.sendmail("yao.li@uuabc.com", "testgroup@uuabc.com", msg.as_string())  # 发送者和接收者
+    # smtp.sendmail("yao.li@uuabc.com", "yao.li@uuabc.com", msg.as_string())  # 发送者和接收者
     smtp.quit()
     print("邮件已发出！注意查收。")
 
@@ -44,7 +47,7 @@ if __name__ == '__main__':
     now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
     filename = '/Users/shuibu/PycharmProjects/YoushiInterface/test_result/' + now + 'test_result.html'
     fp = open(filename, 'wb+')
-    runner = HTMLTestRunner(fp, title=u'测试用例(uathome环境)', description=u'report test')
+    runner = HTMLTestRunner(fp, title=u'测试用例(sit5home环境)', description=u'report test')
     runner.run(suite)
     fp.close()
 

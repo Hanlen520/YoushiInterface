@@ -5,49 +5,49 @@ import pymysql
 
 class PubTest(unittest.TestCase):
     # 登录
-    base_url = "https://uathome.uuabc.com/userlogin"
+    base_url = "https://sit5home.uuabc.com/userlogin"
 
     # 一对四学习中心
-    one_url = "https://uathome.uuabc.com/oneToFour"
+    one_url = "https://sit5home.uuabc.com/oneToFour"
 
     # 全部界面
-    learning_url = "https://uathome.uuabc.com/PadLearningAll"
+    learning_url = "https://sit5home.uuabc.com/PadLearningAll"
 
     # 直播课列表
-    live_list_url = "https://uathome.uuabc.com/PadLiveList"
+    live_list_url = "https://sit5home.uuabc.com/PadLiveList"
 
     # 一对一学习中心
-    one_to_one_url = "https://uathome.uuabc.com/PadLearning"
+    one_to_one_url = "https://sit5home.uuabc.com/PadLearning"
 
     # 退出
-    Logout_url = "https://uathome.uuabc.com/PadLogout"
+    Logout_url = "https://sit5home.uuabc.com/PadLogout"
 
     # 已上直播课列表
-    PadLiveLearning_url = "https://uathome.uuabc.com/PadLiveLearning"
+    PadLiveLearning_url = "https://sit5home.uuabc.com/PadLiveLearning"
 
     # 已看直播课列表
-    PadLivePlayback = "https://uathome.uuabc.com/PadLivePlayback"
+    PadLivePlayback = "https://sit5home.uuabc.com/PadLivePlayback"
 
     # 直播回放
-    PadLiveHistory = "https://uathome.uuabc.com/PadLiveHistory"
+    PadLiveHistory = "https://sit5home.uuabc.com/PadLiveHistory"
 
     # 我的班级
-    myClassInfo = "https://uathome.uuabc.com/myClassInfo"
+    myClassInfo = "https://sit5home.uuabc.com/myClassInfo"
 
     # 直播课-答题排行榜
-    PadLiveRank = "https://uathome.uuabc.com/PadLiveRank"
+    PadLiveRank = "https://sit5home.uuabc.com/PadLiveRank"
 
     # 预约直播课
-    PadLiveReserve = "https://uathome.uuabc.com/PadLiveReserve"
+    PadLiveReserve = "https://sit5home.uuabc.com/PadLiveReserve"
 
     # 直播课取消预约
-    PadLiveReserveCancel = "https://uathome.uuabc.com/PadLiveReserveCancel"
+    PadLiveReserveCancel = "https://sit5home.uuabc.com/PadLiveReserveCancel"
 
     # 检测版本更新
-    lastVersion = "https://uathome.uuabc.com/lastversion"
+    lastVersion = "https://sit5home.uuabc.com/lastversion"
 
     # 钻石排行榜
-    CourseRankList = "https://uathome.uuabc.com/courseRankList"
+    CourseRankList = "https://sit5home.uuabc.com/courseRankList"
 
     headers = {
         'content-type': 'application/json; charset = utf-8',
@@ -57,7 +57,7 @@ class PubTest(unittest.TestCase):
     }
 
     data = {
-        'phoneNum': '13333333335',
+        'phoneNum': '14700000001',
         'password': '123456',
         'version': '3.0.0',
         'appVersion': '3.0.2',
@@ -75,3 +75,6 @@ class PubTest(unittest.TestCase):
 
     def tearDown(self):
         print("testing end")
+
+
+

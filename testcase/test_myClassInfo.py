@@ -32,3 +32,4 @@ class MyClassInfo(PubTest):
         code = requests.request("POST", url=PubTest.myClassInfo, headers=PubTest.headers, data=json.dumps(re))
         ss = json.loads(code.text)
         self.assertEquals(ss['status'],2)
+

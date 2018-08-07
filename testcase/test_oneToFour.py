@@ -55,4 +55,3 @@ class OneToFour(unittest.TestCase):
                 raise Exception("status ==0")
         except:
             traceback.print_exc()
-
